@@ -13,7 +13,7 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
-    name: "audio.primary.munch",
+    name: "audio.primary.kona",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -21,7 +21,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/hw/audio.primary.munch.so",
+                "proprietary/vendor/lib/hw/audio.primary.kona.so",
             ],
             shared_libs: [
                 "libbase",
@@ -29,7 +29,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libtinyalsa",
                 "libtinycompress",
-                "libaudioroute",
+                "libaudioroute-v34",
                 "libaudioutils",
                 "libexpat",
                 "libhidlbase",
@@ -55,7 +55,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "liba2dpoffload_munch",
+    name: "liba2dpoffload",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -63,7 +63,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm: {
             srcs: [
-                "proprietary/vendor/lib/liba2dpoffload_munch.so",
+                "proprietary/vendor/lib/liba2dpoffload.so",
             ],
             shared_libs: [
                 "libaudioutils",
@@ -128,7 +128,7 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libcutils",
                 "libtinyalsa",
-                "libaudioroute",
+                "libaudioroute-v34",
                 "libexpat",
                 "libc++",
                 "libc",
@@ -3748,6 +3748,37 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libarcsat",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libarcsat.so",
+            ],
+            shared_libs: [
+                "libcamera_metadata",
+                "libcom.qti.chinodeutils",
+                "libtriplecam_video_optical_zoom",
+                "libcutils",
+                "libmpbase",
+                "libz",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libarcsoft_beautyshot",
     owner: "xiaomi",
     strip: {
@@ -6191,6 +6222,33 @@ cc_prebuilt_library_shared {
                 "libdl",
                 "libc++_shared",
                 "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsupermoon",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsupermoon.so",
+            ],
+            shared_libs: [
+                "libSNPE",
+                "libc++_shared",
+                "libc",
+                "libm",
+                "libdl",
+                "libz",
+                "liblog",
             ],
         },
     },

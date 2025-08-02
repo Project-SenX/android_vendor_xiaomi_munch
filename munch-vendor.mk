@@ -200,8 +200,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/munch/proprietary/vendor/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/libnfc-nxp_RF.conf
 
 PRODUCT_PACKAGES += \
-    audio.primary.munch \
-    liba2dpoffload_munch \
+    audio.primary.kona \
+    liba2dpoffload \
     libaudio_log_utils \
     libaudioroute_ext \
     libresampler \
@@ -315,6 +315,7 @@ PRODUCT_PACKAGES += \
     libanc_dc_base \
     libarcdualcamsat \
     libarcmulticamsat \
+    libarcsat \
     libarcsoft_beautyshot \
     libarcsoft_hdr_detection \
     libarcsoft_hdrplus_hvx_stub \
@@ -403,6 +404,7 @@ PRODUCT_PACKAGES += \
     libssccalapi \
     libst_soft_isp_calc_exposure_shared \
     libst_soft_isp_shared \
+    libsupermoon \
     libswregistrationalgo \
     libswvdec \
     libsymphony-cpu \
